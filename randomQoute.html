@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #qoute-generator {
+        background-color: cadetblue;
+        border-left: 4px solid rosybrown;
+        border-radius:  6px;
+        padding: 20px;
+        text-align: center;
+    }
+    #text{
+        font-size: 1.2rem;
+        font-style: italic;
+        color: "#334155";
+        margin-bottom: 15px;
+    }
+    button{
+        padding: 10px 20px;
+        background-color: brown;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    
+    <div id="qoute-generator">
+        <p id="text">Click the Generate Button to show qoutes</p>
+        <button id="generate">Generate Qoute</button>
+    </div>
+
+    <script>
+        let qoutes = [
+            "Believe in yourself",
+             "Keep moving forward",
+              "Dreams need action",
+               "Stay calm always",
+                "Make it happen",
+                "Never stop learning"   
+        ]
+        document.getElementById("generate").onclick = function(){
+            let index = Math.floor(Math.random() * 6);
+            document.getElementById("text").innerText = qoutes[index];
+        }
+    </script>
+</body>
+</html>
